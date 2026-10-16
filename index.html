@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Neil Smith Construction school project portfolio: civil, underground utility and site services for school districts across Metro Vancouver.">
+<meta property="og:title" content="NSC School Projects">
+<meta property="og:description" content="Civil, underground utility and site services for school districts across Metro Vancouver.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="icon" href="img/logo.jpg">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>NSC School Projects</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,500;112..125,700;112..125,800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a site cross-section. Dark navy "below grade" bands alternate with light "surface" bands; brand navy + safety yellow from the NSC brochure. Single committed look. */
+:root{
+  --navy:#0b1d45; --navy-2:#0f2659; --navy-3:#163272;
+  --paper:#f2f4f9; --white:#ffffff;
+  --ink:#0b1d45; --ink-soft:#4b5a7a;
+  --on-dark:#eef2fa; --on-dark-soft:#a5b3d1;
+  --yellow:#ffc21a; --yellow-deep:#e0a400;
+  --line-dark:rgba(255,255,255,.12); --line-light:rgba(11,29,69,.12);
+  --water:#3b8cff; --sanitary:#38c172; --storm:#2ec4c4; --hydro:#ff5a4e; --comms:#ff9f1a;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--on-dark);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy)}
+h1,h2,h3{font-family:var(--f-display);font-stretch:118%;line-height:1.02;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.band{padding-block:clamp(64px,9vw,120px);position:relative}
+.band.light{background:var(--paper);color:var(--ink)}
+.band.white{background:var(--white);color:var(--ink)}
+.band.dark{background:var(--navy);color:var(--on-dark)}
+.band.dark2{background:var(--navy-2);color:var(--on-dark)}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:12px;color:var(--yellow-deep);font-weight:500}
+.dark .eyebrow,.dark2 .eyebrow,.hero .eyebrow{color:var(--yellow)}
+.eyebrow::before{content:"";width:28px;height:3px;background:var(--yellow)}
+.h2{font-size:clamp(34px,5.4vw,64px);font-weight:800;letter-spacing:-.02em;margin-top:14px}
+.lede{font-size:clamp(17px,1.6vw,20px);max-width:62ch}
+.mono{font-family:var(--f-mono)}
+.reveal{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.pre{transform:translateY(36px)}
+
+/* NAV */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(11,29,69,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line-dark)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:600;font-size:15px}
+.brand img{width:36px;height:36px;border-radius:4px;border:2px solid #fff}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px}
+.nav ul a{text-decoration:none;color:var(--on-dark-soft)}
+.nav ul a:hover{color:var(--yellow)}
+.nav .call{font-family:var(--f-mono);font-size:13px;color:var(--navy);background:var(--yellow);padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:500;white-space:nowrap}
+@media (max-width:860px){.nav ul{display:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 75% 40%, #183a85 0%, var(--navy) 60%);min-height:clamp(640px,90vh,920px);display:flex;align-items:center}
+#scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,29,69,.92) 0%,rgba(11,29,69,.55) 38%,rgba(11,29,69,0) 62%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-block:72px}
+.hero h1{font-size:clamp(56px,11vw,150px);font-weight:800;letter-spacing:-.035em;margin-top:18px;line-height:.9}
+.hero h1 .y{color:var(--yellow);display:block}
+.hero .lede{color:var(--on-dark-soft);margin-top:22px;max-width:40ch}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:40px;max-width:640px}
+.stat{background:rgba(255,255,255,.06);border:1px solid var(--line-dark);border-radius:14px;padding:14px 16px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.stat b{display:block;font-family:var(--f-display);font-stretch:118%;font-size:clamp(26px,3.4vw,38px);font-weight:800;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--on-dark-soft);line-height:1.3;display:block;margin-top:6px}
+.legend{position:absolute;right:var(--gutter-r);bottom:24px;z-index:3;display:flex;flex-wrap:wrap;gap:8px 14px;font-family:var(--f-mono);font-size:11px;color:var(--on-dark-soft);background:rgba(11,29,69,.6);border:1px solid var(--line-dark);border-radius:10px;padding:10px 14px;max-width:min(520px,calc(100% - 32px))}
+.legend i{display:inline-block;width:18px;height:4px;border-radius:2px;vertical-align:middle;margin-right:6px}
+.hint{position:absolute;left:var(--gutter-l);bottom:24px;z-index:3;font-family:var(--f-mono);font-size:11px;color:var(--on-dark-soft);letter-spacing:.12em;text-transform:uppercase}
+@media (max-width:720px){
+  .hero{align-items:flex-end;min-height:760px}
+  .hero::after{background:linear-gradient(0deg,rgba(11,29,69,.97) 0%,rgba(11,29,69,.75) 52%,rgba(11,29,69,.1) 80%)}
+  .hero .wrap{padding-block:260px 120px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hint{display:none}
+}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(24px,5vw,72px);margin-top:36px;align-items:start}
+.about-grid .lede{color:var(--ink)}
+.about-grid p+p{margin-top:14px}
+.about-side{color:var(--ink-soft)}
+.caps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:48px}
+.cap{background:var(--white);border:1px solid var(--line-light);border-radius:18px;padding:24px;transform-style:preserve-3d}
+.cap h3{font-size:20px;font-weight:700;display:flex;align-items:center;gap:10px}
+.cap h3 svg{width:28px;height:28px;flex:none}
+.cap ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:9px;font-size:15px;color:var(--ink-soft)}
+.cap li{display:flex;gap:10px;line-height:1.4}
+.cap li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--yellow);margin-top:7px;flex:none}
+.cap small{display:block;margin-top:14px;font-family:var(--f-mono);font-size:12px;color:var(--ink-soft)}
+@media (max-width:900px){.about-grid,.caps{grid-template-columns:1fr}}
+
+/* FLEET BAND */
+.fleet{position:relative;height:clamp(320px,52vw,620px);overflow:hidden;background:var(--navy)}
+.fleet img{position:absolute;inset:-12% 0;width:100%;height:124%;max-width:100%;object-fit:cover;will-change:transform}
+.fleet::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,29,69,.0) 40%,rgba(11,29,69,.85) 100%)}
+.fleet .cap-txt{position:absolute;z-index:2;bottom:28px;left:0;right:0}
+.fleet .cap-txt p{font-family:var(--f-display);font-stretch:118%;font-weight:700;font-size:clamp(22px,3.2vw,40px);max-width:22ch;line-height:1.1}
+.fleet .cap-txt span{font-family:var(--f-mono);font-size:12px;color:var(--on-dark-soft);letter-spacing:.1em;text-transform:uppercase;display:block;margin-top:8px}
+
+/* SCHEDULE */
+.sched-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.sched-head .lede{color:var(--on-dark-soft)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.filters button{font:500 13px var(--f-mono);color:var(--on-dark-soft);background:transparent;border:1px solid var(--line-dark);border-radius:999px;padding:7px 14px;cursor:pointer;transition:all .2s}
+.filters button:hover{border-color:var(--yellow);color:#fff}
+.filters button[aria-pressed="true"]{background:var(--yellow);border-color:var(--yellow);color:var(--navy)}
+.gantt-scroll{overflow-x:auto;margin-top:22px;border:1px solid var(--line-dark);border-radius:18px;background:rgba(255,255,255,.03)}
+.gantt{min-width:820px;padding:18px 20px 22px;position:relative}
+.g-axis,.g-row{display:grid;grid-template-columns:250px 1fr 120px;align-items:center;gap:16px}
+.g-axis{font-family:var(--f-mono);font-size:11px;color:var(--on-dark-soft);padding-bottom:10px;border-bottom:1px solid var(--line-dark)}
+.g-years{position:relative;height:16px}
+.g-years span{position:absolute;transform:translateX(-50%)}
+.g-row{padding:11px 0;border-bottom:1px solid var(--line-dark);transition:opacity .3s, background .2s}
+.g-row:last-child{border-bottom:0}
+.g-row.dim{opacity:.22}
+.g-row:hover{background:rgba(255,255,255,.04)}
+.g-name b{display:block;font-weight:600;font-size:14.5px;line-height:1.25;color:#fff}
+.g-name span{font-family:var(--f-mono);font-size:11px;color:var(--on-dark-soft)}
+.g-track{position:relative;height:26px}
+.g-grid{position:absolute;inset:0;pointer-events:none}
+.g-grid i{position:absolute;top:-12px;bottom:-12px;width:1px;background:var(--line-dark)}
+.g-bar{position:absolute;top:4px;height:18px;border-radius:5px;background:linear-gradient(90deg,var(--yellow-deep),var(--yellow));transform-origin:left center;box-shadow:0 0 18px rgba(255,194,26,.25)}
+.g-bar.approx{background:repeating-linear-gradient(135deg,rgba(255,194,26,.75) 0 6px,rgba(255,194,26,.35) 6px 12px);box-shadow:none}
+.g-bar.live::after{content:"";position:absolute;right:-5px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 0 rgba(255,194,26,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,194,26,.7)}70%{box-shadow:0 0 0 12px rgba(255,194,26,0)}100%{box-shadow:0 0 0 0 rgba(255,194,26,0)}}
+.gantt.go .g-bar{animation:grow 1.2s cubic-bezier(.2,.7,.2,1) both}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.g-work{font-size:12.5px;color:var(--on-dark-soft);line-height:1.3}
+.g-now{position:absolute;top:0;bottom:0;width:0;border-left:2px dashed var(--yellow);opacity:.7;pointer-events:none}
+.g-now span{position:absolute;top:-2px;left:6px;font-family:var(--f-mono);font-size:10.5px;color:var(--yellow);white-space:nowrap}
+.g-key{display:flex;gap:20px;flex-wrap:wrap;font-family:var(--f-mono);font-size:11.5px;color:var(--on-dark-soft);margin-top:14px}
+.g-key i{display:inline-block;width:22px;height:10px;border-radius:3px;vertical-align:middle;margin-right:8px}
+
+/* FEATURED */
+.proj{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);gap:clamp(24px,4vw,56px);align-items:center;padding-block:clamp(48px,7vw,88px);border-top:1px solid var(--line-light)}
+.proj:first-of-type{border-top:0}
+.proj:nth-child(even) .proj-info{order:2}
+.num{font-family:var(--f-display);font-stretch:125%;font-weight:800;font-size:clamp(72px,10vw,128px);line-height:.85;color:transparent;-webkit-text-stroke:2px var(--yellow-deep);letter-spacing:-.03em}
+.proj h3{font-size:clamp(28px,3.4vw,42px);font-weight:800;letter-spacing:-.015em;margin-top:14px;color:var(--ink)}
+.proj .sub{color:var(--ink-soft);margin-top:6px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;margin-top:22px;padding-block:18px;border-top:1px solid var(--line-light);border-bottom:1px solid var(--line-light)}
+.meta dt{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.meta dd{margin:2px 0 0;font-weight:600;font-size:15px;line-height:1.3}
+.status{display:inline-flex;align-items:center;gap:7px}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:#2fae66}
+.status.prog::before{background:var(--yellow-deep);animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+.scope{margin-top:20px}
+.scope h4{font-family:var(--f-display);font-stretch:112%;font-size:17px;margin:0 0 10px}
+.scope ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:15px;color:var(--ink-soft)}
+.scope li{display:flex;gap:10px;line-height:1.4}
+.scope li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--yellow);margin-top:7px;flex:none}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:12px;perspective:1200px}
+.shot{position:relative;overflow:hidden;border-radius:16px;background:#dfe4ee;cursor:zoom-in;border:0;padding:0;display:block;width:100%;transform-style:preserve-3d;transition:transform .25s ease, box-shadow .25s ease;box-shadow:0 10px 30px -12px rgba(11,29,69,.35)}
+.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.shot:hover img{transform:scale(1.06)}
+.shot.big{grid-column:1 / -1;aspect-ratio:16/9}
+.shot.sm{aspect-ratio:4/3}
+.shot .glare{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.28),transparent 45%);opacity:0;transition:opacity .25s}
+.shot:hover .glare{opacity:1}
+.shot .zoom{position:absolute;right:10px;bottom:10px;width:34px;height:34px;border-radius:50%;background:rgba(11,29,69,.75);display:grid;place-items:center;color:#fff;opacity:0;transition:opacity .2s}
+.shot:hover .zoom,.shot:focus-visible .zoom{opacity:1}
+@media (max-width:900px){.proj{grid-template-columns:1fr}.proj:nth-child(even) .proj-info{order:0}}
+
+/* MORE */
+.more{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:32px}
+.more article{background:var(--white);border:1px solid var(--line-light);border-radius:16px;padding:20px;transition:transform .25s, box-shadow .25s}
+.more article:hover{transform:translateY(-4px);box-shadow:0 16px 30px -18px rgba(11,29,69,.4)}
+.more .yr{font-family:var(--f-mono);font-size:12px;color:var(--yellow-deep);font-weight:500}
+.more h3{font-size:19px;font-weight:700;margin-top:8px;color:var(--ink)}
+.more p{font-size:14px;color:var(--ink-soft);margin-top:8px}
+@media (max-width:960px){.more{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.more{grid-template-columns:1fr}}
+
+/* TEAM */
+.team{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:36px;perspective:1000px}
+.person{background:rgba(255,255,255,.05);border:1px solid var(--line-dark);border-radius:18px;padding:22px;transition:transform .25s ease,border-color .25s;transform-style:preserve-3d}
+.person:hover{border-color:rgba(255,194,26,.5)}
+.avatar{width:48px;height:48px;border-radius:12px;background:var(--navy-3);border:1px solid var(--line-dark);display:grid;place-items:center;font-family:var(--f-display);font-stretch:118%;font-weight:800;color:var(--yellow);font-size:17px}
+.person h3{font-size:18px;font-weight:700;margin-top:16px;color:#fff}
+.person .role{font-size:13px;color:var(--yellow);margin-top:4px;line-height:1.35}
+.person p{font-size:14px;color:var(--on-dark-soft);margin-top:10px;line-height:1.5}
+@media (max-width:1000px){.team{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.team{grid-template-columns:1fr}}
+
+/* REFERENCES */
+.refs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.ref{background:var(--white);border:1px solid var(--line-light);border-radius:18px;padding:24px}
+.ref h3{font-size:20px;font-weight:700;color:var(--ink)}
+.ref ul{list-style:none;padding:0;margin:14px 0 0}
+.ref li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-top:1px solid var(--line-light);font-size:15px}
+.ref li b{font-weight:600}
+.ref li span{color:var(--ink-soft);font-size:13.5px;text-align:right}
+.note{margin-top:16px;font-size:14px;color:var(--ink-soft)}
+@media (max-width:760px){.refs{grid-template-columns:1fr}}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,64px);align-items:start}
+.contact h2{font-size:clamp(40px,6.4vw,80px);font-weight:800;letter-spacing:-.03em}
+.contact h2 span{color:var(--yellow)}
+.contact .lede{color:var(--on-dark-soft);margin-top:18px}
+.lines{display:grid;gap:12px}
+.line{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;border:1px solid var(--line-dark);border-radius:14px;background:rgba(255,255,255,.04)}
+.line small{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-dark-soft)}
+.line b{font-weight:600;font-size:17px;user-select:all;overflow-wrap:anywhere}
+.line a{text-decoration:none}
+.copy{font:500 12px var(--f-mono);color:var(--navy);background:var(--yellow);border:0;border-radius:999px;padding:7px 12px;cursor:pointer;flex:none}
+.addr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.addr .line{display:block}
+.addr .line b{font-size:15px;user-select:text}
+footer{background:var(--navy);border-top:1px solid var(--line-dark);font-size:13px;color:var(--on-dark-soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:24px}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+@media (max-width:480px){.addr{grid-template-columns:1fr}}
+
+/* LIGHTBOX */
+.lb[hidden]{display:none!important}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,15,38,.94);display:grid;place-items:center;padding:calc(56px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(56px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb img{max-width:min(1200px,100%);max-height:100%;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5);animation:pop .35s cubic-bezier(.2,.7,.2,1)}
+@keyframes pop{from{transform:scale(.94);opacity:.4}to{transform:none;opacity:1}}
+.lb button{position:absolute;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer;display:grid;place-items:center}
+.lb .x{top:calc(12px + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px))}
+.lb .prev{left:max(12px,env(safe-area-inset-left,0px));top:50%}
+.lb .next{right:max(12px,env(safe-area-inset-right,0px));top:50%}
+.lb p{position:absolute;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;font-family:var(--f-mono);font-size:12px;color:var(--on-dark-soft)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .reveal.pre{transform:none}
+}
+</style>
+
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/logo.jpg" alt="NSC logo">Neil Smith Construction</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#schedule">Projects</a></li>
+      <li><a href="#featured">Featured</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="call" href="#contact">604-537-5797</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="eyebrow">School Project Portfolio</div>
+    <h1>School<span class="y">Projects</span></h1>
+    <p class="lede">Civil, underground utility and site services for school districts across Metro Vancouver.</p>
+    <div class="stats">
+      <div class="stat"><b data-count="9">9</b><span>school projects</span></div>
+      <div class="stat"><b data-count="5">5</b><span>school districts</span></div>
+      <div class="stat"><b data-count="50" data-suffix="+">50+</b><span>years combined experience</span></div>
+      <div class="stat"><b>COR</b><span>certified safety program</span></div>
+    </div>
+  </div>
+  <div class="hint">Drag or move to look around ↻</div>
+  <div class="legend" aria-label="Utility colour key">
+    <span><i style="background:var(--water)"></i>Water main</span>
+    <span><i style="background:var(--sanitary)"></i>Sanitary</span>
+    <span><i style="background:var(--storm)"></i>Storm</span>
+    <span><i style="background:var(--hydro)"></i>BC Hydro</span>
+    <span><i style="background:var(--comms)"></i>Comms</span>
+    <span><i style="background:#cfd6e6"></i>Detention tank</span>
+  </div>
+</header>
+
+<section class="band light" id="about">
+  <div class="wrap">
+    <div class="eyebrow">About us</div>
+    <h2 class="h2">Civil work for schools across Metro Vancouver</h2>
+    <div class="about-grid">
+      <div>
+        <p class="lede">Neil Smith Construction is a civil contractor based in Richmond, BC, with over 50 years of combined experience in underground utilities, earthworks and site servicing. School projects are a core part of our work: new additions, modular classrooms and the site services and frontage works that go with them.</p>
+      </div>
+      <div class="about-side">
+        <p>We work for construction managers and prime contractors on everything from site preparation to full civil scopes. Our own crews and equipment handle excavation, utilities, concrete and paving.</p>
+        <p>Before we mobilize we review traffic control plans, local bylaws and Good Neighbour programs, and every day starts with a toolbox meeting. We are COR certified.</p>
+      </div>
+    </div>
+    <div class="caps">
+      <div class="cap tilt reveal">
+        <h3><svg viewBox="0 0 28 28" fill="none" stroke="#0b1d45" stroke-width="2"><rect x="3" y="15" width="22" height="9" rx="2"/><circle cx="9" cy="19.5" r="2" fill="#ffc21a" stroke="none"/><circle cx="19" cy="19.5" r="2" fill="#ffc21a" stroke="none"/><path d="M3 11h22M7 7h14"/></svg>What we build</h3>
+        <ul>
+          <li>Sanitary and storm mains, manholes, detention tanks</li>
+          <li>Water mains and services</li>
+          <li>BC Hydro and communication conduits</li>
+          <li>Excavation, grading and shoring</li>
+          <li>Sidewalks, curbs, gutters, asphalt paving</li>
+          <li>Concrete pads and slabs</li>
+          <li>Demolition and site restoration</li>
+        </ul>
+      </div>
+      <div class="cap tilt reveal">
+        <h3><svg viewBox="0 0 28 28" fill="none" stroke="#0b1d45" stroke-width="2"><path d="M3 21h14v-6h-6l-3 3H3z"/><path d="M17 15l5-9 3 2-3 7"/><circle cx="6" cy="23" r="1.6" fill="#ffc21a" stroke="none"/><circle cx="14" cy="23" r="1.6" fill="#ffc21a" stroke="none"/></svg>Our fleet</h3>
+        <ul>
+          <li>Excavators in various sizes</li>
+          <li>Loaders, backhoes, skid steers</li>
+          <li>Dozers and graders</li>
+          <li>Compactors</li>
+          <li>Dump trucks</li>
+          <li>Air track and coring drills</li>
+        </ul>
+        <small>Maintained at our Langley yard</small>
+      </div>
+      <div class="cap tilt reveal">
+        <h3><svg viewBox="0 0 28 28" fill="none" stroke="#0b1d45" stroke-width="2"><path d="M5 15a9 9 0 0 1 18 0"/><rect x="3" y="15" width="22" height="4" rx="1.5" fill="#ffc21a" stroke="#0b1d45"/><path d="M14 6v4"/></svg>Our team</h3>
+        <ul>
+          <li>Senior Project Manager on every project</li>
+          <li>Dedicated Project Manager day to day</li>
+          <li>In-house estimating division</li>
+          <li>Coordinators for QA/QC, RFIs and as-builts</li>
+          <li>Site supervisors and foremen with tablets on site</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fleet" aria-label="NSC excavators on a school site">
+  <img src="img/hero.jpg" alt="Kobelco, CAT and Doosan excavators carrying NSC decals on a cleared site" id="fleetImg">
+  <div class="cap-txt"><div class="wrap"><p>Our own crews. Our own equipment.</p><span>Fleet maintained at the Langley yard · 22617 Fraser Hwy</span></div></div>
+</div>
+
+<section class="band dark" id="schedule">
+  <div class="wrap">
+    <div class="sched-head">
+      <div>
+        <div class="eyebrow">At a glance</div>
+        <h2 class="h2">Every school project, on one schedule</h2>
+      </div>
+      <p class="lede">Nine projects across five districts from 2021 to today. Filter by district to see where we've worked.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter by school district">
+      <button type="button" data-f="all" aria-pressed="true">All districts</button>
+      <button type="button" data-f="36" aria-pressed="false">SD #36 Surrey</button>
+      <button type="button" data-f="40" aria-pressed="false">SD #40 New Westminster</button>
+      <button type="button" data-f="37" aria-pressed="false">SD #37 Delta</button>
+      <button type="button" data-f="41" aria-pressed="false">SD #41 Burnaby</button>
+      <button type="button" data-f="38" aria-pressed="false">Richmond SD</button>
+    </div>
+    <div class="gantt-scroll">
+      <div class="gantt" id="gantt"></div>
+    </div>
+    <div class="g-key">
+      <span><i style="background:var(--yellow)"></i>Dated duration</span>
+      <span><i style="background:repeating-linear-gradient(135deg,rgba(255,194,26,.75) 0 4px,rgba(255,194,26,.35) 4px 8px)"></i>Year of work</span>
+      <span><i style="background:transparent;border-left:2px dashed var(--yellow);width:2px;border-radius:0"></i>Today</span>
+    </div>
+  </div>
+</section>
+
+<section class="band light" id="featured">
+  <div class="wrap">
+    <div class="eyebrow">Featured projects</div>
+    <h2 class="h2">Five school sites, start to finish</h2>
+    <div id="projects"></div>
+  </div>
+</section>
+
+<section class="band white">
+  <div class="wrap">
+    <div class="eyebrow">More school work</div>
+    <h2 class="h2">Richmond School District</h2>
+    <div class="more">
+      <article class="reveal"><div class="yr">2024 · Richmond</div><h3>William Cook Elementary School</h3><p>Earthworks and civil works</p></article>
+      <article class="reveal"><div class="yr">2024 · Richmond</div><h3>Howard DeBeck Secondary School</h3><p>Seismic upgrade and temporary portables</p></article>
+      <article class="reveal"><div class="yr">2024 · Richmond</div><h3>Brighouse Modular Addition</h3><p>Earthworks and civil works</p></article>
+      <article class="reveal"><div class="yr">2023 · Richmond</div><h3>Richmond School District Portables</h3><p>Civil work</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="band dark2" id="team">
+  <div class="wrap">
+    <div class="eyebrow">People</div>
+    <h2 class="h2">Project team</h2>
+    <div class="team" id="teamGrid"></div>
+  </div>
+</section>
+
+<section class="band light" id="references">
+  <div class="wrap">
+    <div class="eyebrow">References</div>
+    <h2 class="h2">Who we've worked with</h2>
+    <div class="refs">
+      <div class="ref reveal">
+        <h3>Guildford Park Secondary School</h3>
+        <ul>
+          <li><b>Trevor Wong</b><span>Associate Director, SD #36</span></li>
+          <li><b>Margarita Krivolutskaya</b><span>Project Manager, SD #36</span></li>
+          <li><b>Isaiah Adrian</b><span>Site Superintendent, Unitech</span></li>
+          <li><b>Clif Crawford</b><span>Project Manager, Unitech</span></li>
+        </ul>
+      </div>
+      <div class="ref reveal">
+        <h3>Queen Elizabeth Elementary</h3>
+        <ul>
+          <li><b>Nasir Kurji</b><span>Project Manager, SD #40</span></li>
+          <li><b>Shivaji Yadav</b><span>Project Manager, Pro-Can</span></li>
+          <li><b>Leo Perez</b><span>Principal, Pro-Can</span></li>
+          <li><b>Ryan Crowhurst</b><span>Site Superintendent, Pro-Can</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Reference contact details are available on request.</p>
+  </div>
+</section>
+
+<section class="band dark" id="contact">
+  <div class="wrap contact">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2 style="margin-top:14px">Planning a <span>school project?</span></h2>
+      <p class="lede">Talk to our team about site services, civil works and earthworks.</p>
+    </div>
+    <div class="lines">
+      <div class="line"><div><small>Phone</small><b id="ph">604-537-5797</b></div><button class="copy" type="button" data-copy="ph">Copy</button></div>
+      <div class="line"><div><small>Email</small><b id="em">info@nscltd.ca</b></div><button class="copy" type="button" data-copy="em">Copy</button></div>
+      <div class="line"><div><small>Web</small><b><a href="https://neilsmithconstructionltd.com" target="_blank" rel="noopener">neilsmithconstructionltd.com ↗</a></b></div></div>
+      <div class="addr">
+        <div class="line"><small>Head office</small><b>206 - 6011 Westminster Hwy<br>Richmond, BC V7C 4R9</b></div>
+        <div class="line"><small>Storage yard</small><b>22617 Fraser Highway<br>Langley, BC V2Z 2T5</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© Neil Smith Construction Ltd.</span><span class="mono">COR certified · Richmond, BC</span></div></footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <img id="lbImg" alt="">
+  <button class="x" type="button" aria-label="Close">×</button>
+  <button class="prev" type="button" aria-label="Previous photo">‹</button>
+  <button class="next" type="button" aria-label="Next photo">›</button>
+  <p id="lbCap"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- DATA ---------- */
+const PROJECTS = [
+ {id:'gp', name:'Guildford Park Secondary School Addition', sub:'Secondary school addition, Surrey',
+  meta:[['Client','School District #36'],['Construction manager','Unitech Construction Management'],['Started','Sep 2025'],['Status','In progress']],
+  scope:['Storm, sanitary, water and electrical services','Bulk and detail excavation','Supply and install detention tank','Storm and sanitary upgrade for the City of Surrey','Concrete sidewalk, letdown and driveways','Concrete curbs and sidewalks inside the school','New asphalt paving and restoration'],
+  caps:['Site excavation underway at the addition','New water services with valves in the trench','Detention tank modules being installed']},
+ {id:'gg', name:'George Greenaway Elementary Addition', sub:'Elementary school addition, Surrey',
+  meta:[['Client','School District #36'],['Prime contractor','Unitech Construction Management'],['Duration','Aug to Dec 2025'],['Status','Completed']],
+  scope:['Bulk and detailed excavation for site development','Trenching for underground utilities','Site grading, trimming and preparation for hardscape works','Site restoration and stabilization of disturbed areas'],
+  caps:['Bulk excavation and footing layout','Steel going up beside graded site','Foundation walls and backfill']},
+ {id:'qe', name:'Queen Elizabeth Elementary Addition', sub:'Elementary school addition, New Westminster',
+  meta:[['Client','School District #40'],['Prime contractor','Pro-Can Construction Group'],['Started','Sep 2024'],['Status','In progress']],
+  scope:['Rerouting and realignment of the city sanitary forcemain','Sanitary, storm and water service installation','Bulk and detailed excavation for the addition','Streetlighting, culvert installation and road upgrade','New sidewalk, curbs and driveways for the city','New parking pavement with curb and sidewalk upgrades'],
+  caps:['New city sidewalk along the frontage','Road upgrade with fresh asphalt','Forcemain and conduits in the trench']},
+ {id:'la', name:'Ladner Elementary Modular Addition', sub:'Modular classroom addition, Delta',
+  meta:[['Client','School District #37'],['Construction manager','Unitech Construction Management'],['Duration','Apr to Dec 2025'],['Status','Completed']],
+  scope:['Demolition and removal of existing site infrastructure','Site preparation for modular building installation','Storm, sanitary and water service upgrades','Reinforced concrete sidewalk and slabs','Asphalt paving at the new parking area and school yard'],
+  caps:['Removing existing asphalt beside the school','New paving at the school yard','Site preparation for the modular building']},
+ {id:'pc', name:'Parkcrest Elementary School', sub:'Civil works package C-028, Burnaby',
+  meta:[['Client','School District #41'],['Construction manager','Unitech Construction Management'],['Duration','Jan 2021 to Nov 2023'],['Status','Completed']],
+  scope:['Bulk and detailed excavation for new construction','Supply and install storm and sanitary sewer lines','Supply and install water services','New sidewalk, curb and driveway for the city','Road construction and asphalt paving','New parking area with concrete curb and sidewalk'],
+  caps:['Finished parking lot beside the new school','Storm chambers before backfill','Roller compacting new asphalt at dusk']}
+];
+
+const SCHED = [
+ {n:'Guildford Park Secondary', c:'Surrey', d:'36', dl:'SD #36', w:'Site services, detention tank, frontage works, paving', s:[2025,9], e:'now', f:'gp'},
+ {n:'George Greenaway Elementary', c:'Surrey', d:'36', dl:'SD #36', w:'Excavation, trenching, grading, restoration', s:[2025,8], e:[2025,12], f:'gg'},
+ {n:'Queen Elizabeth Elementary', c:'New Westminster', d:'40', dl:'SD #40', w:'Forcemain realignment, services, roads', s:[2024,9], e:'now', f:'qe'},
+ {n:'Ladner Elementary Modular', c:'Delta', d:'37', dl:'SD #37', w:'Demolition, site prep, services, paving', s:[2025,4], e:[2025,12], f:'la'},
+ {n:'Parkcrest Elementary', c:'Burnaby', d:'41', dl:'SD #41', w:'Excavation, sewers, water, roads, paving', s:[2021,1], e:[2023,11], f:'pc'},
+ {n:'William Cook Elementary', c:'Richmond', d:'38', dl:'Richmond SD', w:'Earthworks and civil works', s:[2024,1], e:[2024,12], approx:true},
+ {n:'Howard DeBeck Secondary', c:'Richmond', d:'38', dl:'Richmond SD', w:'Seismic upgrade, temporary portables', s:[2024,1], e:[2024,12], approx:true},
+ {n:'Brighouse Modular Addition', c:'Richmond', d:'38', dl:'Richmond SD', w:'Earthworks and civil works', s:[2024,1], e:[2024,12], approx:true},
+ {n:'Richmond SD Portables', c:'Richmond', d:'38', dl:'Richmond SD', w:'Civil work', s:[2023,1], e:[2023,12], approx:true}
+];
+
+const TEAM = [
+ ['Dennis Frederickson','Director','Over 40 years in construction and project management across residential, commercial, utility and earthmoving projects.'],
+ ['Navid Ghasemi','General Manager, Senior Project Manager',"16+ years in the industry. Bachelor's in building engineering, master's degrees in project management and construction engineering. Has managed projects from $1M to $10M."],
+ ['Moe Hosseini','Project Coordinator / Project Management Assistant',"Master's in civil engineering. Supports the project managers on municipal and school district civil projects, including QA/QC records, RFIs and as-builts."],
+ ['Hamid Goudarzi','Construction Technologist, Infrastructure Utility / Project Coordinator',"Master's in civil engineering and Engineer-in-Training with Engineers and Geoscientists BC. Utility coordination, documentation, QA/QC and procurement."],
+ ['Umit Sokel','Civil Estimator',"Master's in civil engineering. Over 12 years estimating municipal, infrastructure and school district work."],
+ ['Cody Delarue','Site Supervisor','Over 15 years supervising civil work, including school district upgrades and underground sanitary, storm and water systems.'],
+ ['Justin McCormack','Site Supervisor','Over 20 years in civil construction. Experienced on active school and urban sites, with Trimble GPS and grade control.'],
+ ['Djoomart Bugubaev','Construction Safety Officer','Supports safe site operations by monitoring site activities, identifying hazards and helping crews follow safety standards.']
+];
+
+/* ---------- FEATURED PROJECTS ---------- */
+const projEl = document.getElementById('projects');
+const allShots = [];
+PROJECTS.forEach((p,i)=>{
+  const status = p.meta[3][1];
+  const art = document.createElement('article');
+  art.className='proj'; art.id='p-'+p.id;
+  const shots = [1,2,3].map(k=>{
+    const idx = allShots.push({src:`img/${p.id}${k}.jpg`, cap:`${p.name} · ${p.caps[k-1]}`})-1;
+    return `<button type="button" class="shot ${k===1?'big':'sm'} tilt-shot" data-i="${idx}" aria-label="Enlarge photo: ${p.caps[k-1]}"><img src="img/${p.id}${k}.jpg" alt="${p.caps[k-1]}" loading="lazy"><span class="glare"></span><span class="zoom">⤢</span></button>`;
+  }).join('');
+  art.innerHTML = `
+    <div class="proj-info reveal">
+      <div class="num">${String(i+1).padStart(2,'0')}</div>
+      <h3>${p.name}</h3>
+      <p class="sub">${p.sub}</p>
+      <dl class="meta">${p.meta.map(([k,v])=>`<div><dt>${k}</dt><dd>${k==='Status'?`<span class="status ${v==='In progress'?'prog':''}">${v}</span>`:v}</dd></div>`).join('')}</dl>
+      <div class="scope"><h4>Scope of work</h4><ul>${p.scope.map(s=>`<li>${s}</li>`).join('')}</ul></div>
+    </div>
+    <div class="mosaic reveal">${shots}</div>`;
+  projEl.appendChild(art);
+});
+
+/* ---------- TEAM ---------- */
+document.getElementById('teamGrid').innerHTML = TEAM.map(([n,r,d])=>{
+  const ini = n.split(' ').map(w=>w[0]).join('').slice(0,2);
+  return `<div class="person tilt reveal"><div class="avatar">${ini}</div><h3>${n}</h3><div class="role">${r}</div><p>${d}</p></div>`;
+}).join('');
+
+/* ---------- SCHEDULE (to scale: Jan 2021 – Jan 2027) ---------- */
+const T0 = 2021*12, T1 = 2027*12, SPAN = T1-T0;
+const NOW = new Date(); const nowM = NOW.getFullYear()*12 + NOW.getMonth() + NOW.getDate()/31;
+const pct = m => ((m - T0)/SPAN*100);
+const g = document.getElementById('gantt');
+let years = ''; let grid='';
+for(let y=2021;y<=2027;y++){ years += `<span style="left:${pct(y*12)}%">${y}</span>`; grid += `<i style="left:${pct(y*12)}%"></i>`; }
+g.innerHTML = `<div class="g-axis"><span>Project</span><div class="g-years">${years}</div><span>Scope</span></div>` +
+ SCHED.map(r=>{
+   const s = r.s[0]*12 + r.s[1]-1;
+   const e = r.e==='now' ? nowM : r.e[0]*12 + r.e[1];
+   const label = r.e==='now' ? `${mon(r.s)} → today` : (r.approx ? `${r.s[0]}` : `${mon(r.s)} – ${mon(r.e)}`);
+   const link = r.f ? `<a href="#p-${r.f}" style="text-decoration:none">${r.n} ↓</a>` : r.n;
+   return `<div class="g-row" data-d="${r.d}"><div class="g-name"><b>${link}</b><span>${r.c} · ${r.dl} · ${label}</span></div>
+     <div class="g-track"><div class="g-grid">${grid}</div><div class="g-bar ${r.approx?'approx':''} ${r.e==='now'?'live':''}" style="left:${pct(s)}%;width:${pct(e)-pct(s)}%" title="${r.n}: ${label}"></div></div>
+     <div class="g-work">${r.w}</div></div>`;
+ }).join('') +
+ `<div class="g-now" id="gnow"><span>Today</span></div>`;
+function mon(a){return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][a[1]-1]+' '+a[0];}
+function placeNow(){
+  const track = g.querySelector('.g-track'); const gn = document.getElementById('gnow');
+  const gr = g.getBoundingClientRect(), tr = track.getBoundingClientRect();
+  gn.style.left = (tr.left - gr.left + tr.width*pct(nowM)/100) + 'px';
+  gn.style.top = (g.querySelector('.g-axis').offsetHeight + 18) + 'px';
+}
+placeNow(); addEventListener('resize', placeNow);
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed', x===b));
+  const f=b.dataset.f;
+  g.querySelectorAll('.g-row').forEach(r=>r.classList.toggle('dim', f!=='all' && r.dataset.d!==f));
+}));
+
+/* ---------- REVEALS (transform only; content always visible) ---------- */
+if(!reduce && 'IntersectionObserver' in window){
+  const io = new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.remove('pre'); io.unobserve(e.target); }
+  }),{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{
+    const r = el.getBoundingClientRect();
+    if(r.top > innerHeight){ el.classList.add('pre'); el.style.transitionDelay = (i%4)*70+'ms'; io.observe(el); }
+  });
+  const gio = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ g.classList.add('go'); gio.disconnect(); }}),{threshold:.25});
+  if(g.getBoundingClientRect().top > innerHeight) gio.observe(g);
+}
+
+/* ---------- COUNTERS ---------- */
+if(!reduce){
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const end=+el.dataset.count, suf=el.dataset.suffix||''; const t0=performance.now();
+    (function tick(t){ const k=Math.min(1,(t-t0)/1400); const v=Math.round(end*(1-Math.pow(1-k,3)));
+      el.textContent=v+suf; if(k<1) requestAnimationFrame(tick); })(t0);
+  });
+}
+
+/* ---------- TILT ---------- */
+const fine = matchMedia('(pointer:fine)').matches;
+if(fine && !reduce){
+  document.querySelectorAll('.tilt, .tilt-shot').forEach(el=>{
+    const max = el.classList.contains('tilt-shot') ? 7 : 5;
+    el.addEventListener('pointermove',ev=>{
+      const r=el.getBoundingClientRect(); const x=(ev.clientX-r.left)/r.width, y=(ev.clientY-r.top)/r.height;
+      el.style.transform=`perspective(900px) rotateY(${(x-.5)*max*2}deg) rotateX(${(.5-y)*max*2}deg) translateZ(6px)`;
+      el.style.setProperty('--gx',x*100+'%'); el.style.setProperty('--gy',y*100+'%');
+    });
+    el.addEventListener('pointerleave',()=>{el.style.transform='';});
+  });
+}
+
+/* ---------- FLEET PARALLAX ---------- */
+const fleet=document.getElementById('fleetImg');
+if(!reduce){
+  let tk=false;
+  addEventListener('scroll',()=>{ if(tk) return; tk=true; requestAnimationFrame(()=>{
+    const r=fleet.parentElement.getBoundingClientRect(); const p=(r.top+r.height/2-innerHeight/2)/innerHeight;
+    fleet.style.transform=`translateY(${p*-8}%) scale(1.05)`; tk=false; }); },{passive:true});
+}
+
+/* ---------- LIGHTBOX ---------- */
+const lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
+let cur=0, lastFocus=null;
+function show(i){ cur=(i+allShots.length)%allShots.length; lbImg.src=allShots[cur].src; lbImg.alt=allShots[cur].cap; lbCap.textContent=`${allShots[cur].cap}  ·  ${cur+1} / ${allShots.length}`; }
+document.addEventListener('click',e=>{
+  const s=e.target.closest('.shot'); if(!s) return;
+  lastFocus=s; show(+s.dataset.i); lb.hidden=false; document.body.style.overflow='hidden'; lb.querySelector('.x').focus();
+});
+function close(){ lb.hidden=true; document.body.style.overflow=''; lastFocus&&lastFocus.focus(); }
+lb.querySelector('.x').onclick=close;
+lb.querySelector('.prev').onclick=()=>show(cur-1);
+lb.querySelector('.next').onclick=()=>show(cur+1);
+lb.addEventListener('click',e=>{ if(e.target===lb) close(); });
+addEventListener('keydown',e=>{ if(lb.hidden) return; if(e.key==='Escape')close(); if(e.key==='ArrowRight')show(cur+1); if(e.key==='ArrowLeft')show(cur-1); });
+let sx=null; lb.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',e=>{ if(sx===null) return; const dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>50) show(cur+(dx<0?1:-1)); sx=null; });
+
+/* ---------- COPY ---------- */
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  const el=document.getElementById(b.dataset.copy); const txt=el.textContent;
+  const done=()=>{ b.textContent='Copied'; setTimeout(()=>b.textContent='Copy',1600); };
+  const sel=()=>{ const r=document.createRange(); r.selectNodeContents(el); const s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent='Selected'; setTimeout(()=>b.textContent='Copy',1600); };
+  try{ navigator.clipboard.writeText(txt).then(done,sel); }catch(_){ sel(); }
+}));
+
+/* ---------- 3D SITE CROSS-SECTION ---------- */
+if(!window.THREE) return;
+const canvas=document.getElementById('scene');
+let renderer;
+try{ renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true}); }catch(_){ return; }
+renderer.setPixelRatio(Math.min(devicePixelRatio, innerWidth<720?1.5:2));
+const scene=new THREE.Scene();
+scene.fog=new THREE.Fog(0x0b1d45,46,95);
+const camera=new THREE.PerspectiveCamera(32,1,.1,300);
+scene.add(new THREE.AmbientLight(0xbfd0ff,.65));
+const sun=new THREE.DirectionalLight(0xffffff,.9); sun.position.set(-14,30,18); scene.add(sun);
+const rim=new THREE.PointLight(0xffc21a,.8,60); rim.position.set(14,4,14); scene.add(rim);
+
+const site=new THREE.Group(); scene.add(site);
+const W=36, D=22;
+const YEL=0xffc21a;
+function edges(mesh,color,op){ const l=new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry),new THREE.LineBasicMaterial({color,transparent:true,opacity:op})); l.position.copy(mesh.position); l.rotation.copy(mesh.rotation); return l; }
+
+// soil strata (cut-away block)
+const strata=[{h:1.4,c:0x9b7a52,o:.16},{h:2.2,c:0x6e5539,o:.13},{h:1.8,c:0x404558,o:.12}];
+let y=0;
+strata.forEach(s=>{
+  const m=new THREE.Mesh(new THREE.BoxGeometry(W,s.h,D),new THREE.MeshStandardMaterial({color:s.c,transparent:true,opacity:s.o,depthWrite:false}));
+  m.position.y=y-s.h/2; site.add(m); site.add(edges(m,YEL,.18)); y-=s.h;
+});
+const baseY=y;
+// ground grid
+const gHelp=new THREE.GridHelper(W,36,0x5576c0,0x2a4383); gHelp.scale.z=D/W; gHelp.material.transparent=true; gHelp.material.opacity=.45; site.add(gHelp);
+
+// road + sidewalk + curb at front
+const road=new THREE.Mesh(new THREE.BoxGeometry(W,.12,4.2),new THREE.MeshStandardMaterial({color:0x1d2230,roughness:.9}));
+road.position.set(0,.06,D/2-2.1); site.add(road);
+for(let x=-W/2+1;x<W/2;x+=2.4){ const d=new THREE.Mesh(new THREE.BoxGeometry(1.2,.02,.12),new THREE.MeshBasicMaterial({color:YEL})); d.position.set(x+.6,.13,D/2-2.1); site.add(d); }
+const walk=new THREE.Mesh(new THREE.BoxGeometry(W,.18,1.4),new THREE.MeshStandardMaterial({color:0xc9cfdb,roughness:.8}));
+walk.position.set(0,.09,D/2-4.9); site.add(walk);
+// parking lot
+const lot=new THREE.Mesh(new THREE.BoxGeometry(11,.1,7),new THREE.MeshStandardMaterial({color:0x232938,roughness:.9}));
+lot.position.set(11.5,.05,-1.5); site.add(lot);
+for(let i=0;i<6;i++){ const s=new THREE.Mesh(new THREE.BoxGeometry(.08,.02,2.2),new THREE.MeshBasicMaterial({color:0xffffff})); s.position.set(7+i*1.8,.11,-3.6); site.add(s); }
+
+// school building + modular addition (wire + glass)
+function block(w,h,d,x,z,col,op){
+  const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),new THREE.MeshStandardMaterial({color:col,transparent:true,opacity:op,metalness:.1,roughness:.4}));
+  m.position.set(x,h/2,z); site.add(m); site.add(edges(m,0xffffff,.55)); return m;
+}
+block(14,4.2,7,-6,-6,0x1f4aa8,.42);
+block(6,2.8,7,4,-6,0x1f4aa8,.32);
+// window strips
+for(let i=0;i<6;i++){ const w=new THREE.Mesh(new THREE.PlaneGeometry(1.4,.8),new THREE.MeshBasicMaterial({color:0xffe18a,transparent:true,opacity:.55})); w.position.set(-11.2+i*2.1,2.8,-2.49); site.add(w); }
+// portables
+for(let i=0;i<3;i++) block(2.6,1.6,4.2,-15.2+i*3.1,1.4,0x2a5bc8,.35);
+// trees
+for(const [x,z] of [[-16,-9],[-13,-9.5],[15,-9],[16.5,-7],[9,-9.3]]){
+  const t=new THREE.Mesh(new THREE.ConeGeometry(.9,3.2,7),new THREE.MeshStandardMaterial({color:0x1f6b4a,flatShading:true})); t.position.set(x,1.9,z); site.add(t);
+}
+
+// utilities
+const pipes=[];
+function pipe(pts,r,color,speed){
+  const path=new THREE.CurvePath();
+  for(let i=0;i<pts.length-1;i++) path.add(new THREE.LineCurve3(new THREE.Vector3(...pts[i]),new THREE.Vector3(...pts[i+1])));
+  const len=path.getLength();
+  const geo=new THREE.TubeGeometry(path,Math.max(20,Math.round(len*3)),r,14,false);
+  const mat=new THREE.MeshStandardMaterial({color,emissive:color,emissiveIntensity:.35,roughness:.35,metalness:.2});
+  site.add(new THREE.Mesh(geo,mat));
+  // flow particles
+  const n=Math.max(6,Math.round(len*1.1));
+  const pos=new Float32Array(n*3);
+  const pg=new THREE.BufferGeometry(); pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  const pm=new THREE.PointsMaterial({color:0xffffff,size:r*1.1,transparent:true,opacity:.9,depthWrite:false,blending:THREE.AdditiveBlending});
+  const pts3=new THREE.Points(pg,pm); site.add(pts3);
+  pipes.push({path,n,pos,pg,speed:speed/len});
+}
+const zW=D/2-3.0, zS=D/2-1.4, zSt=D/2-4.4, zC=D/2-5.9;
+pipe([[-W/2,-1.6,zW],[W/2,-1.6,zW]],.2,0x3b8cff,4);                         // water main
+pipe([[-2,-1.6,zW],[-2,-1.6,-2.4]],.12,0x3b8cff,3);                          // water service
+pipe([[-W/2,-3.2,zS],[W/2,-3.7,zS]],.3,0x38c172,2.4);                        // sanitary main
+pipe([[3,-2.4,-2.4],[3,-3.45,zS]],.16,0x38c172,2);                           // sanitary service
+pipe([[W/2,-2.5,zSt],[-W/2,-2.9,zSt]],.36,0x2ec4c4,3);                       // storm main
+pipe([[-10.5,-2.2,0.6],[-10.5,-2.7,zSt]],.2,0x2ec4c4,2.5);                   // tank outlet
+pipe([[11.5,-.6,-1.5],[11.5,-2.6,zSt]],.14,0x2ec4c4,2);                      // catch basin lead
+pipe([[-W/2,-.9,zC],[W/2,-.9,zC]],.1,0xff5a4e,5);                            // hydro
+pipe([[-W/2,-.9,zC+.35],[W/2,-.9,zC+.35]],.1,0xff9f1a,5);                    // comms
+pipe([[6,-.9,zC],[6,-.9,-2.4]],.08,0xff5a4e,4);                              // hydro to building
+
+// manholes
+for(const x of [-12,0,12]){
+  const mh=new THREE.Mesh(new THREE.CylinderGeometry(.55,.55,3.4,20,1,true),new THREE.MeshStandardMaterial({color:0xaeb6c8,transparent:true,opacity:.35,side:THREE.DoubleSide}));
+  mh.position.set(x,-1.7,zS); site.add(mh);
+  const lid=new THREE.Mesh(new THREE.CylinderGeometry(.6,.6,.06,24),new THREE.MeshStandardMaterial({color:0x101522,metalness:.6})); lid.position.set(x,.14,zS); site.add(lid);
+}
+// detention tank (module grid)
+const tank=new THREE.Group(); site.add(tank);
+const modG=new THREE.BoxGeometry(.85,.85,.85);
+const modM=new THREE.MeshStandardMaterial({color:0xcfd6e6,transparent:true,opacity:.18,depthWrite:false});
+for(let i=0;i<7;i++)for(let j=0;j<2;j++)for(let k=0;k<4;k++){
+  const m=new THREE.Mesh(modG,modM); m.position.set(-13+i*.9,-1.8-j*.9,-1.2+k*.9); tank.add(m); tank.add(edges(m,0xcfd6e6,.35));
+}
+// survey stakes
+for(const [x,z] of [[-17,8],[17,8],[-17,-10],[17,-10],[7,4]]){
+  const st=new THREE.Mesh(new THREE.BoxGeometry(.08,1.4,.08),new THREE.MeshStandardMaterial({color:0xd8c7a4})); st.position.set(x,.7,z); site.add(st);
+  const fl=new THREE.Mesh(new THREE.PlaneGeometry(.35,.22),new THREE.MeshBasicMaterial({color:0xff4fa3,side:THREE.DoubleSide})); fl.position.set(x+.2,1.3,z); site.add(fl);
+}
+
+site.position.y=1.2;
+
+// sizing
+function size(){
+  const w=canvas.clientWidth, h=canvas.clientHeight; if(!w||!h) return;
+  renderer.setSize(w,h,false); camera.aspect=w/h;
+  camera.fov = w<720 ? 46 : 32;
+  camera.updateProjectionMatrix();
+}
+size(); addEventListener('resize',size);
+
+// interaction
+let mx=0,my=0,tx=0,ty=0, drag=null, yaw=0, yawV=0;
+addEventListener('pointermove',e=>{ tx=e.clientX/innerWidth-.5; ty=e.clientY/innerHeight-.5;
+  if(drag!==null){ yawV=(e.clientX-drag)*.006; drag=e.clientX; } },{passive:true});
+canvas.parentElement.addEventListener('pointerdown',e=>{ if(e.target.closest('a,button')) return; drag=e.clientX; });
+addEventListener('pointerup',()=>{ drag=null; });
+
+let visible=true;
+new IntersectionObserver(es=>{ visible=es[0].isIntersecting; if(visible && !reduce) loop(); }).observe(canvas);
+const clock=new THREE.Clock(); let running=false, t=0;
+const wide = () => innerWidth>=720;
+function frame(){
+  const dt=Math.min(clock.getDelta(),.05); if(!reduce) t+=dt;
+  mx+=(tx-mx)*.05; my+=(ty-my)*.05;
+  yaw += yawV; yawV*=.92;
+  const sc=Math.min(1,scrollY/innerHeight);
+  const theta = -0.55 + Math.sin(t*.12)*.35 + mx*.5 + yaw;
+  const r = wide()?52:60, phi = .95 - my*.25 - sc*.35;
+  const cx = wide()? 9 : 0;
+  camera.position.set(cx + r*Math.sin(theta)*Math.cos(phi*.55), r*Math.sin(phi*.55)+6, r*Math.cos(theta)*Math.cos(phi*.55));
+  camera.lookAt(cx*.45, -1.2 - sc*2, 0);
+  site.rotation.y = 0;
+  pipes.forEach(p=>{
+    for(let i=0;i<p.n;i++){
+      const u=((i/p.n)+t*p.speed)%1; const v=p.path.getPointAt(u);
+      p.pos[i*3]=v.x; p.pos[i*3+1]=v.y; p.pos[i*3+2]=v.z;
+    }
+    p.pg.attributes.position.needsUpdate=true;
+  });
+  renderer.render(scene,camera);
+}
+function loop(){
+  if(running) return; running=true; clock.getDelta();
+  (function f(){ if(!visible){ running=false; return; } frame(); requestAnimationFrame(f); })();
+}
+if(reduce){ frame(); addEventListener('resize',frame); } else loop();
+})();
+</script>
+
+</body>
+</html>
